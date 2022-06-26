@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Artikel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td><img src="@item.ThumbnailURL" /></td>
+                </tr>
+                <tr>
+                    <td><a href="@Url.Action("Details", new {id = item.IdArtikel })">@Html.DisplayFor(modelItem => item.Judul) </a></td>
+                </tr>
+              
+            </table>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdArtikel }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdArtikel })
+        </td>
+  
+    </tr>
+}
+
+</table>

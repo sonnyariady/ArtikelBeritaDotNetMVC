@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ArtikelModelStoreContainer" CdmEntityContainer="ArtikelEntities">
+    <EntitySetMapping Name="Artikels">
+      <EntityTypeMapping TypeName="ArtikelModel.Artikel">
+        <MappingFragment StoreEntitySet="Artikel">
+          <ScalarProperty Name="IdArtikel" ColumnName="IdArtikel" />
+          <ScalarProperty Name="Judul" ColumnName="Judul" />
+          <ScalarProperty Name="IsiArtikel" ColumnName="IsiArtikel" />
+          <ScalarProperty Name="ThumbnailURL" ColumnName="ThumbnailURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

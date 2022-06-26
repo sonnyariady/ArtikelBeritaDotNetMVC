@@ -1,0 +1,29 @@
+﻿@model Artikel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <table>
+        <tr>
+            <td><img src="@Model.ThumbnailURL" /></td>
+        </tr>
+        <tr>
+            <td><center>@Html.DisplayFor(modelItem => Model.Judul) </center></td>
+        </tr>
+        <tr>
+            <td>
+                @Model.IsiArtikel
+            </td>
+        </tr>
+    </table>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdArtikel }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
